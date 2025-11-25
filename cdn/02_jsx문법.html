@@ -14,11 +14,10 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        // JSX
+        // JSX 문법
         const element = <h1>Hello, world!</h1>;
-        // 반드시 self-closing
+        // 1. 반드시 self-closing
         const img = <img src="logo.png" />;
-        // 오류! 닫는 태그 필요
         const element2 = <br />;
 
         /* 
@@ -32,8 +31,8 @@
         function App() {
             // 올바른 JSX
             return (
-                // <></>: flagments 태그 (ver.17)
-                // JSX는 반드시 하나의 부모 태그로 감싸야 합니다.
+                // 2. JSX는 반드시 하나의 부모 태그로 감싸야 합니다.
+                // <></>: flagments 태그 (ver.16)
                 <>
                     <div>
                         <h1>제목</h1>
@@ -48,18 +47,27 @@
         }
 
 
-        // 속성 이름은 카멜 표기법으로
+        // 3. 속성 이름은 카멜 표기법으로
         // 예) className, htmlFor, tabIndex
         const div = <div className="box">내용</div>;
         const lbl = <label htmlFor="inputId">이름</label>;
 
-        // JSX 안에서는 JavaScript 표현식을 {}로 감쌉니다.
+        // 4. JSX 안에서는 JavaScript 표현식을 {}로 감쌉니다.
         const name = "React";
-        const element3 = <h1>{name} 배우기</h1>;  // 결과: <h1>React 배우기</h1>
-        console.log(element3);
+        const element3 = <h1>{name} 배우기</h1>;
+
+        // 4-1 조건부 렌더링
+        // -> 3항 연산자 또는 && 연산자를 조건식으로 사용!
+        const isLoggedIn = false;
+        const isAdmin = true;
+        const login = <div>{ isLoggedIn ? <p>환영합니다</p> : <p>로그인하세요</p> }</div>;
+        const admin = <div>{ isAdmin && <button>관리자 페이지</button> }</div>;
+
+        // 4-2 인라인 style 속성은 객체 형태로 작성한다.
+        const element4 = <h1 style={{ color: 'red', fontSize: '20px' }}>스타일 적용</h1>;
 
         const root = ReactDOM.createRoot(document.querySelector('#root'));
-        root.render(element3);
+        root.render(element4); // 결과: <h1>React 배우기</h1>
     </script>
 </body>
 
