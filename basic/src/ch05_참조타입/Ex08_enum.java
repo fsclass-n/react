@@ -2,15 +2,21 @@ package ch05_참조타입;
 
 import java.util.Calendar;
 
-import ch05.sec12.Week;
-
-public class EnumMain {
+// ctrl+shift+o: 자동 임포트
+// java.lang 패키지 -> 기본 패키지 -> import 없이 사용
+public class Ex08_enum {
 
 	public static void main(String[] args) {
 		//Week 열거 타입 변수 선언
+		// 참조타입 변수 = null;
 		Week today = null;
- 
-		//Calendar 얻기
+
+		// Calendar 얻기
+		// 객체 생성
+		// String 변수 = "문자열"
+		// String 변수 = new String("문자열");
+		// cal 객체 생성
+		// 클래스 변수 = 클래스.메서드();
 		Calendar cal = Calendar.getInstance();
 		
 		//오늘의 요일 얻기(1~7)
@@ -28,8 +34,8 @@ public class EnumMain {
 		}
 		
 		//열거 타입 변수를 사용
-		if(today == Week.SUNDAY) {
-			System.out.println("일요일에는 축구를 합니다.");
+		if(today == Week.WEDNESDAY) {
+			System.out.println("토요일에는 열심히 놀자!");
 		} else {
 			System.out.println("열심히 자바를 공부합니다.");
 		}
