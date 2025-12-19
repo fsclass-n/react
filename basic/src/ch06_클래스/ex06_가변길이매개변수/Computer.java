@@ -1,4 +1,4 @@
-package ch06_클래스.ex05_메서드;
+package ch06_클래스.ex06_가변길이매개변수;
 
 public class Computer {
 	
