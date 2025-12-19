@@ -46,7 +46,7 @@ public class Car {
 
 	// 필드는 반드시 클래스 블록{}에서 선언되어야 한다.
 	// 필드(변수) 선언 및 할당
-	String student = "현대자동차";
+	String company = "현대자동차";
 	String model = "그랜저";
 	String color = "검정";
 	// 카멜 표기법
@@ -67,6 +67,7 @@ public class Car {
 	}
 
 	// [public] 클래스(매개변수, ...) { //객체 초기화 코드 }
+	// 필드는 객체 내부의 생성자(this.필드)와 메서드 내부에서 사용
 	Car(String model) {
 		// 필드를 초기화
 		// this? 클래스 자기 자신
