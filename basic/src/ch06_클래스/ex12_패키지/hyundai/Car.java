@@ -4,7 +4,7 @@ package ch06_클래스.ex12_패키지.hyundai;
 
 // 자동 임포트: ctrl+shift+o
 import ch06_클래스.ex12_패키지.hankook.SnowTire;
-//import ch06_클래스.ex12_패키지.hankook.Tire;
+import ch06_클래스.ex12_패키지.hankook.Tire;
 
 /**
 * 26. 패키지(package)
@@ -46,19 +46,22 @@ import ch06_클래스.ex12_패키지.kumho.*;
 public class Car {
 	
 	public static void main(String[] args) {
-		// 어떤 패키지의 클래스를 사용할 지 결정할 수 없기 때문에 컴파일 에러 발생!
 		Tire tire = new Tire();
-		// The field Tire.company is not visible
 		System.out.println(tire.company);
 		
 		// 클래스 전체 이름을 사용할 경우 import 문은 필요 없다.
 		// 클래스 전체 이름? 패키지.클래스
 		ch06_클래스.ex12_패키지.hankook.Tire tire1 = new ch06_클래스.ex12_패키지.hankook.Tire();
 		ch06_클래스.ex12_패키지.kumho.Tire tire2 = new ch06_클래스.ex12_패키지.kumho.Tire();
+		System.out.println(tire1.company);
+		System.out.println(tire2.company);
 		
 		// 클래스명만 사용할 경우 관련 패키지를 import 한 후 사용한다. (일반적)
 		SnowTire tire3 = new SnowTire();
-		AllSeasonTire tire4 = new AllSeasonTire();		
+		AllSeasonTire tire4 = new AllSeasonTire();
+		
+		System.out.println(tire3.msg);
+		System.out.println(tire4.msg);
 	}
 	
 }
