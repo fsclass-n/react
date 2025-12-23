@@ -4,7 +4,7 @@ package ch06_클래스.ex12_패키지.hyundai;
 
 // 자동 임포트: ctrl+shift+o
 import ch06_클래스.ex12_패키지.hankook.SnowTire;
-import ch06_클래스.ex12_패키지.hankook.Tire;
+//import ch06_클래스.ex12_패키지.hankook.Tire;
 
 /**
 * 26. 패키지(package)
@@ -21,7 +21,8 @@ import ch06_클래스.ex12_패키지.kumho.AllSeasonTire;
 // The import ch06_클래스.ex12_패키지.kumho.Tire collides(충돌하다) with another import statement
 // import ch06_클래스.ex12_패키지.kumho.Tire; // 에러
 // The import ch06_클래스.ex12_패키지.kumho is never used // 경고
-import ch06_클래스.ex12_패키지.kumho.*;
+// *는 kumho 패키지 안의 모든 클래스
+//import ch06_클래스.ex12_패키지.kumho.*;
 
 
 /**
@@ -37,6 +38,7 @@ import ch06_클래스.ex12_패키지.kumho.*;
 *   - 개발 회사 도메인 이름의 역순으로 작성하고, 마지막에 프로젝트명을 붙인다.
 *
 * 		package 상위패키지.하위패키지;
+* 		도메인: subway.co.kr
 * 
 * 		예) kr.co.subway.프로젝트명
 *		예) com.naver.프로젝트명
@@ -46,8 +48,8 @@ import ch06_클래스.ex12_패키지.kumho.*;
 public class Car {
 	
 	public static void main(String[] args) {
-		Tire tire = new Tire();
-		System.out.println(tire.company);
+		//Tire tire = new Tire();
+		//System.out.println(tire.company);
 		
 		// 클래스 전체 이름을 사용할 경우 import 문은 필요 없다.
 		// 클래스 전체 이름? 패키지.클래스
