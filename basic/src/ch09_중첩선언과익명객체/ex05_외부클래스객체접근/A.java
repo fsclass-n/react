@@ -1,6 +1,15 @@
-package ch09_중첩.ex04_외부클래스멤버접근;
+package ch09_중첩선언과익명객체.ex05_외부클래스객체접근;
 
-public class A2 {
+/**
+ * 외부 클래스: class A
+ * 내부 클래스: class B
+ * 
+ * 내부 클래스 안에서 외부 클래스의 객체에 접근하려면?
+ * 
+ * 		외부클래스명.this
+ * 
+ */
+public class A {
 	//A 인스턴스 필드
 	String field = "A-field";
 	
@@ -27,8 +36,8 @@ public class A2 {
 			this.method();
 	
 			//A 객체의 필드와 메소드 사용
-			System.out.println(A2.this.field);
-			A2.this.method();
+			System.out.println(A.this.field);
+			A.this.method();
 		}
 	}
 	
