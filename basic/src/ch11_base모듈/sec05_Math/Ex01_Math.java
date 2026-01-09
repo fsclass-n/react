@@ -13,6 +13,7 @@ package ch11_base모듈.sec05_Math;
  *   	Math.floor(-5.3)			-6.0
  *   	Math.max(5,9)		최댓값	9
  *   	Math.min(5.3, 2.5)	최솟값	2.5
+ *   
  *   	Math.random()		난수값	0.0<=x<1.0
  *   
  */
