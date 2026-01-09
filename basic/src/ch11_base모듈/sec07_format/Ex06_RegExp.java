@@ -30,18 +30,30 @@ import java.util.regex.Pattern;
  * 	- static boolean matches(String regex, CharSequence input) 
  *  
  */
-public class Ex05_RegExp {
+public class Ex06_RegExp {
 	public static void main(String[] args) {
-		// 전화번호
-		String regExp = "(02|010)-\\d{3,4}-\\d{4}";
-		String data = "010-123-4567";
+		// String idRegex = "^[a-z0-9]{5,20}$";
+		// 영문 대소문자 허용
+		// String idRegex = "^[a-zA-Z0-9]{5,20}$";
+		// 첫 글자는 영문만 허용
+		// String idRegex = "^[a-zA-Z][a-zA-Z0-9]{4,19}$";
+		// 패스워드(Password) 정규식
+		// String pwRegex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,20}$";
+		// 대문자 / 소문자 모두 포함 필수
+		// String pwRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,20}$";
+		
+		// 휴대전화 + 유선전화 모두 허용
+		// \\는 이스케이프 문자로 역슬래시(\) 하나를 문자열로 포함시킨다.
+		String regExp = "^0\\d{1,2}-?\\d{3,4}-?\\d{4}$";
+		String data = "031-123-4567";
 		boolean result = Pattern.matches(regExp, data);
 		if(result) {
 			System.out.println("정규식과 일치합니다.");
 		} else {
 			System.out.println("정규식과 일치하지 않습니다.");
 		}
-			
+		
+		// 이메일
 		regExp = "\\w+@\\w+\\.\\w+(\\.\\w+)?";
 		data = "angel@mycompanycom";
 		result = Pattern.matches(regExp, data);

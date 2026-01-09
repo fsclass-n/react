@@ -22,7 +22,7 @@ import java.text.DecimalFormat;
  *   		#,###.0			1234.89		1,234.9
  *
  */
-public class Ex04_DecimalFormat {
+public class Ex05_DecimalFormat {
 	public static void main(String[] args) {
 		double num = 123456789.8678;
 
