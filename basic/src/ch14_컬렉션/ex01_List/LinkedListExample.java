@@ -1,4 +1,4 @@
-package ch14_컬렉션.ex03_LinkedList;
+package ch14_컬렉션.ex01_List;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

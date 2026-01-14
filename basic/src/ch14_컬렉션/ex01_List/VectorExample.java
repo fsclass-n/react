@@ -1,9 +1,7 @@
-package ch14_컬렉션.ex02_Vector;
+package ch14_컬렉션.ex01_List;
 
 import java.util.List;
 import java.util.Vector;
-
-import ch14_컬렉션.ex01_ArrayList.Board;
 /**
  * Vector
  * 	- 동기화(synchronized) 메서드로 구성
