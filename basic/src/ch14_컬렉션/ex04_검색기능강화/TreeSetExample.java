@@ -86,11 +86,16 @@ public class TreeSetExample {
 		System.out.println("85점이거나 바로 위의 점수: " + scores.ceiling(85) + "\n");
 
 		//내림차순으로 정렬하기
-//		Iterator<Integer> it = scores.desendingIterator();
-//		while (it.hasNext()) {
-//			Integer score = it.next();
-//			System.out.println(score);
-//		}
+		// descendingIterator()를 사용하여 역순 반복자 생성
+		Iterator<Integer> it = scores.descendingIterator(); 
+
+		while (it.hasNext()) {
+		    Integer score = it.next();
+		    System.out.print(score + " ");
+		}
+		
+		System.out.println("\n");
+		
 		NavigableSet<Integer> descendingScores = scores.descendingSet();
 		for(Integer s : descendingScores) {
 			System.out.print(s + " ");
